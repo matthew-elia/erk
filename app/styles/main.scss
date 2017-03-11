@@ -1,6 +1,8 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$fa-font-path: "../bower_components/font-awesome/fonts/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "font-awesome/scss/font-awesome.scss";
 // endbower
 
 body {
@@ -18,6 +20,17 @@ nav {
   .navbar-brand {
     font-size: 48px;
   }
+  .social-links {
+    span {
+      font-size: 36px;
+      color: dodgerblue;      
+    }
+    &:hover {
+      span {
+        color:firebrick; 
+      }
+    }
+  }
 }
 #RootContainer {
   background-image: url('/images/banner.png');
@@ -28,7 +41,7 @@ nav {
   .bodyContainer {
     background: rgba(darkgreen,0.15);
     position: absolute;
-    top:0px;right:10px;left:40%;
+    top:0px;right:0;left:33%;
     bottom:0px;
     color:black;
     overflow-x: hidden !important;
@@ -44,7 +57,7 @@ nav {
   #style-9::-webkit-scrollbar-track
   {
   // -webkit-box-shadow: inset 0 0 6px rgba(darkred,0.3);
-  background-color: rgba(darkgreen,0);
+  background-color: rgba(dodgerblue,0);
   }
   #style-9::-webkit-scrollbar
   {
@@ -53,7 +66,7 @@ nav {
 
   #style-9::-webkit-scrollbar-thumb
   {
-  background-color: darkgreen;
+  background-color: dodgerblue;
   }
 }
 
