@@ -13,39 +13,100 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-nav {
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0;
-  .navbar-brand {
-    font-size: 48px;
+
+a {
+  color: black;
+  text-decoration: none !important;
+  &:hover {
+    color: dodgerblue;
   }
-  .social-links {
-    span {
-      font-size: 36px;
-      color: dodgerblue;      
-    }
-    &:hover {
+}
+
+hr {
+  border-top-color: dodgerblue;
+  width: 70%;
+}
+
+
+#NavContentContainer {
+  position: absolute;
+  top:0;bottom:0;right:0;left:67%;
+
+  #SocialLinksList {
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    .social-links {
       span {
-        color:firebrick; 
+        font-size: 30px;
+        color: black;      
+      }
+      &:hover {
+        span {
+          color:dodgerblue; 
+        }
       }
     }
   }
+
+  @media screen and (max-width:992px) {
+    position: initial;
+    bottom: initial;
+    left: 0;
+    #SocialLinksList {
+      position: initial;
+      bottom: inactive;
+    }
+  }
+  
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0;
+  
+  #PageLinksList{
+    .page-links {
+      font-size: 36px;
+      letter-spacing: 1.5px;
+      margin: 5px 0px;          
+    }
+  }
+
+
 }
-#RootContainer {
+
+footer {
+  position: absolute;
+  bottom:100px;right:0;
+  width: 33%;
+  #YoutubeVideoEmbed {}
+} 
+
+#MainContentContainer {
   background-image: url('/images/banner.png');
   background-size: cover;
   padding: 0 !important;
   background-repeat: no-repeat;
   height: 100%;
-  .bodyContainer {
-    background: rgba(darkgreen,0.15);
+  .main-content-wrapper {
+    background: rgba(darkgreen,0.2);
     position: absolute;
-    top:0px;right:0;left:33%;
-    bottom:0px;
+    top:0px;bottom:0px;
+    left:0;
+    right:33%;
+
     color:black;
     overflow-x: hidden !important;
     overflow-y: scroll !important;
+    
+    @media screen and (max-width:992px) {
+      position: initial;
+      bottom: initial;
+      right: 0;
+    }
+    .well {
+      border: none !important;
+      background: rgba(white,0.6);
+    }
     h1 {
       font-size: 120px;
     }
