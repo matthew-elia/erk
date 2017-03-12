@@ -18,12 +18,11 @@
   </head>
   <body ng-app="erkApp">
 
-    <div id="NavContentContainer" class="navbar navbar-default" role="navigation">
-
+    <div id="NavWrap" class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
         <div class="row text-center">
           <div class="col-xs-12">
-            <a href="#/">
+            <a href='/'>
               <h1><big>SOUNDS</big><br><sup class="text-muted"> by ERIC VARGAS</sup></h1>
             </a>
           </div>
@@ -32,8 +31,14 @@
         <div class="row text-center">
           <div class="col-xs-12">
             <ul id="PageLinksList" class="list-unstyled">
-              <li><a class="page-links" ng-href="#/about">about</a></li>
-              <li><a class="page-links" ng-href="#/blog">blog</a></li>
+              <li><a class="page-links" href="/#!/about">about</a></li>
+              <li><a class="page-links" href="/#!/blog">blog</a></li>
+              <br><br>
+              <li>
+                <a class="page-links" href="/">
+                  <span class="fa fa-home"></span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -42,9 +47,9 @@
           <ul id="SocialLinksList" class="list-unstyled list-inline">
             <hr>
             <li><a class="social-links" href="#/"><span class="fa fa-facebook"></span></a></li>
-            <li><a class="social-links" ng-href="#/"><span class="fa fa-twitter"></span></a></li>
-            <li><a class="social-links" ng-href="#/"><span class="fa fa-instagram"></span></a></li>
-            <li><a class="social-links" ng-href="#/"><span class="fa fa-youtube"></span></a></li>    
+            <li><a class="social-links" href="#/"><span class="fa fa-twitter"></span></a></li>
+            <li><a class="social-links" href="#/"><span class="fa fa-instagram"></span></a></li>
+            <li><a class="social-links" href="#/"><span class="fa fa-youtube"></span></a></li>    
           </ul>
         </div>
 
@@ -53,11 +58,9 @@
 
     </div><!-- end #NavContentContainer -->
 
-    <div id="MainContentContainer">
-      <div class="container-fluid">
+      <div id="RootContentWrapper">
         <div ng-view=""></div>
       </div>
-    </div>
 
     <footer class="visible-lg">
       <div id="YoutubeVideoEmbed">
@@ -97,6 +100,8 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/blog.js"></script>
         <!-- endbuild -->
 </body>
 </html>
