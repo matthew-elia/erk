@@ -2,11 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Sounds by EV</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -17,59 +15,52 @@
     <!-- endbuild -->
   </head>
   <body ng-app="erkApp">
-
-    <div id="NavWrap" class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default">
       <div class="container-fluid">
-        <div class="row text-center">
-          <div class="col-xs-12">
-            <a href='/'>
-              <h1><big>SOUNDS</big><br><sup class="text-muted"> by ERIC VARGAS</sup></h1>
-            </a>
-          </div>
-        </div>
-
-        <div class="row text-center">
-          <div class="col-xs-12">
-            <ul id="PageLinksList" class="list-unstyled">
-              <li><a class="page-links" href="/#!/about">about</a></li>
-              <li><a class="page-links" href="/#!/blog">blog</a></li>
-              <br><br>
-              <li>
-                <a class="page-links" href="/">
-                  <span class="fa fa-home"></span>
-                </a>
-              </li>
+        <!-- <div class="row"> -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavCollapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href='/'><strong><b>SOUND</b></strong><small class="text-muted" style="font-size:18px;"> by ERIC VARGAS</small></a>
+            <ul class="nav navbar-nav hidden-xs" style="position:absolute;left:44%;">
+              <li class="social-links"><a href="#/"><span class="fa fa-facebook"></span></a></li>
+              <li class="social-links"><a href="#/"><span class="fa fa-twitter"></span></a></li>
+              <li class="social-links"><a href="#/"><span class="fa fa-instagram"></span></a></li>
+              <li class="social-links"><a href="#/"><span class="fa fa-youtube"></span></a></li>    
             </ul>
           </div>
-        </div>
-
-        <div class="row text-center">
-          <ul id="SocialLinksList" class="list-unstyled list-inline">
-            <hr>
-            <li><a class="social-links" href="#/"><span class="fa fa-facebook"></span></a></li>
-            <li><a class="social-links" href="#/"><span class="fa fa-twitter"></span></a></li>
-            <li><a class="social-links" href="#/"><span class="fa fa-instagram"></span></a></li>
-            <li><a class="social-links" href="#/"><span class="fa fa-youtube"></span></a></li>    
-          </ul>
-        </div>
-
+          <div class="collapse navbar-collapse" id="NavCollapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="page-links"><a href="/#!/about"><span>about</span></a></li>
+              <li class="page-links"><a href="/#!/blog"><span>blog</span></a></li>
+              <div class="visible-xs text-center">
+                <hr>
+                <li class="social-links"><a href="#/"><span class="fa fa-facebook"></span></a></li>
+                <li class="social-links"><a href="#/"><span class="fa fa-twitter"></span></a></li>
+                <li class="social-links"><a href="#/"><span class="fa fa-instagram"></span></a></li>
+                <li class="social-links"><a href="#/"><span class="fa fa-youtube"></span></a></li>    
+              </div>
+            </ul>
+          </div>
       </div>
+    </nav>
+
+    <div id="RootContentWrapper">
+      <div ng-view=""></div>
     </div>
 
-    </div><!-- end #NavContentContainer -->
-
-      <div id="RootContentWrapper">
-        <div ng-view=""></div>
-      </div>
-
-    <footer class="visible-lg">
-      <div id="YoutubeVideoEmbed">
+    <footer>
+      <img id="SkylineBanner" class="pull-right" src="images/skyline.png" class="img-responsive" width="65%" height="auto" />
+      <!-- <div id="YoutubeVideoEmbed">
         <div class="row text-center">
           <div class="col-xs-12">
             <iframe height="240px" width="320px" src="https://youtube.com/embed/YQHneGxuZrs"></iframe>
           </div>  
         </div>
-      </div>
+      </div> -->
     </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -97,11 +88,11 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/blog.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/blog.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
