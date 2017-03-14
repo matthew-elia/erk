@@ -4,6 +4,13 @@ $fa-font-path: "../bower_components/font-awesome/fonts/";
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 @import "font-awesome/scss/font-awesome.scss";
 // endbower
+@import "compass/css3";
+ 
+@include font-face("NYC1970", font-files("ChaletNewYorkNineteenSeventy.ttf"));
+ 
+* {
+  font-family: "NYC1970";
+}
 
 
 body {
@@ -72,7 +79,7 @@ div[id$="ContentContainer"] {
   div[class$="-content-wrapper"] {
     div[id$="Jumbotron"] {
       position:fixed;
-      top:40%;
+      top:44%;
       bottom: 0;
       left: 0;
       right: 0;
@@ -83,7 +90,7 @@ div[id$="ContentContainer"] {
         background: url('/images/aboutBanner.jpeg');
         background-size: cover;
         background-repeat:no-repeat;
-        height:40%;
+        height:44%;
         overflow: hidden;
         position:fixed;
         top:0;left:0;right:0;
@@ -104,7 +111,7 @@ div[id$="ContentContainer"] {
       background: rgba(crimson,0.3);
       bottom:0; 
       left:0; 
-      top:40%;
+      top:44%;
       padding:5px;
       overflow-y: scroll;
       overflow-x: hidden;
