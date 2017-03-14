@@ -14,10 +14,10 @@ body {
 }
 
 a {
-  color: black;
+  color: dodgerblue;
   text-decoration: none !important;
   &:hover {
-    color: dodgerblue;
+    color: beige;
   }
 }
 
@@ -26,85 +26,103 @@ hr {
   width: 70%;
 }
 
-nav {
+nav.navbar-default {
   position: fixed;
   left:0;right:0;
   z-index: 1000;
-  background: white !important;
+  background: transparent !important;
   border: none;
   border-radius:0;
   margin-bottom: 0 !important;
   .navbar-header {
-    .navbar-brand {color:black !important;font-size:32px;}
-    ul {
-      margin-left:20px;
-      li.social-links {
-        font-size: 20px;
+    .navbar-brand {
+      strong {
+        font-size:48px;
+        color:dodgerblue !important;
+      }
+      small {
+        margin-left: 10px;
+        font-size:25px;
+        color: crimson;
       }
     }
   }
   .navbar-collapse {
-    background: white;
+    background: transparent !important;
     border-bottom: none;
     .social-links{padding:5px 10px;display:inline;}
   }
+
   .social-links, 
   .page-links {
-    font-size: 28px;
+    font-size: 36px;
     text-decoration: none;
     span {
-      color: black;      
+      color: dodgerblue;      
     }
     &:hover {
       span {
-        color:dodgerblue; 
+        color: crimson; 
       }
     }
   }
 }
-  // @media screen and (max-width:992px) {
-  //   position: initial;
-  //   bottom: initial;
-  //   left: 0;
-  //   #SocialLinksList {
-  //     position: initial;
-  //     bottom: inactive;
-  //   }
-  // }
-
 
 div[id$="ContentContainer"] {
-  
   div[class$="-content-wrapper"] {
-    // background: rgba(dodgerblue,0.1);
-    background:transparent;
-    // position:absolute;
-    top:50px;
-    bottom:0;left:0;right:0;
-    color:black;
-    overflow-x: hidden !important;
-    overflow-y: scroll !important;
-    
-    .jumbotron {
-      background: url('/images/aboutBanner.jpeg');
-      background-size: cover;
-      background-repeat:no-repeat;
-      height: 480px;
-      h1 {
-        position:absolute;
-        bottom:0;
-        right:0;left:0;
-        top:20px;
-        color: white; 
-        text-shadow: 2px 2px saddlebrown;
-        font-size:160px;
-        padding:40px 0px;
+    div[id$="Jumbotron"] {
+      position:fixed;
+      top:40%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: black;
+      overflow-x: hidden !important;
+      overflow-y: scroll !important;
+      .jumbotron {
+        background: url('/images/aboutBanner.jpeg');
+        background-size: cover;
+        background-repeat:no-repeat;
+        height:40%;
+        overflow: hidden;
+        position:fixed;
+        top:0;left:0;right:0;
+        h1 {
+          color:crimson;
+          text-shadow: 2px 2px black;
+          position:absolute;
+          bottom:5px;
+          right:15px;
+          font-size:8em;
+          border-bottom: 10px solid dodgerblue;
+        }
       }
+    }
+
+    .container {
+      position: absolute;
+      background: rgba(crimson,0.3);
+      bottom:0; 
+      left:0; 
+      top:40%;
+      padding:5px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      width:64%;
+      z-index: 500;
     }
 
     .thumbnail {
       background: none !important;
-      border: none !important;
+      border: none;
+      img {
+        margin: 0 auto !important;
+        &:hover {
+          cursor:pointer;
+          opacity: 0.9;
+          // border-bottom:2px solid dodgerblue;
+        }
+      }
     }
 
   }
@@ -125,19 +143,35 @@ div[id$="ContentContainer"] {
   }
 }
 
-.testScrollbarVisibility {
-  height: 2000px;
-  width: 100%;
-}
-
 footer {
-  position:relative;
-  top:200px;
-  bottom:0;right:0;left:0;
-  width: 100%;
-  z-index: -1;
-  #SkylineBanner{position:inherit;}
-  #YoutubeVideoEmbed {}
+  position:fixed;
+  bottom:0;
+  width:100%;
+  z-index:100;
+  #SkylineBanner {
+    position:fixed;
+    left:-15px;
+    bottom:-10px;
+    padding: 5px;
+    margin-top: 300px;
+    overflow: hidden;
+    opacity: 0.2;
+    z-index: 200;
+    right:10px;
+  }
+  #SocialFooterLinks {
+    position:relative;
+    font-size:36px;
+    span {
+      color: dodgerblue;      
+      &:hover {
+        pointer:cursor;
+        color:crimson !important; 
+      }
+    }
+    z-index:300;
+  }
+  // #YoutubeVideoEmbed {}
 } 
 
 

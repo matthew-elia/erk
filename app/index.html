@@ -24,18 +24,17 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>                        
             </button>
-            <a class="navbar-brand" href='/'><strong><b>SOUND</b></strong><small class="text-muted" style="font-size:18px;"> by ERIC VARGAS</small></a>
-            <ul class="nav navbar-nav hidden-xs" style="position:absolute;left:44%;">
-              <li class="social-links"><a href="#/"><span class="fa fa-facebook"></span></a></li>
-              <li class="social-links"><a href="#/"><span class="fa fa-twitter"></span></a></li>
-              <li class="social-links"><a href="#/"><span class="fa fa-instagram"></span></a></li>
-              <li class="social-links"><a href="#/"><span class="fa fa-youtube"></span></a></li>    
-            </ul>
+            <a class="navbar-brand" href='/'>
+              <strong><b>SOUND</b></strong>
+              <br>&nbsp;&nbsp;&nbsp;
+              <small class="text-muted" style=""> by ERIC VARGAS</small>
+            </a>
           </div>
           <div class="collapse navbar-collapse" id="NavCollapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class="page-links"><a href="/#!/about"><span>about</span></a></li>
-              <li class="page-links"><a href="/#!/blog"><span>blog</span></a></li>
+              <li class="page-links"><a href="/#!/"><span>WORK</span></a></li>
+              <li class="page-links"><a href="/#!/blog"><span>BLOG</span></a></li>
+              <li class="page-links"><a href="/#!/about"><span>ABOUT</span></a></li>
               <div class="visible-xs text-center">
                 <hr>
                 <li class="social-links"><a href="#/"><span class="fa fa-facebook"></span></a></li>
@@ -52,8 +51,18 @@
       <div ng-view=""></div>
     </div>
 
-    <footer>
-      <img id="SkylineBanner" class="pull-right" src="images/skyline.png" class="img-responsive" width="65%" height="auto" />
+    <footer> 
+      <div class="container-fluid">
+        <img id="SkylineBanner" src="images/skyline.png" class="img-responsive" />
+        <div class="pull-right">
+          <ul id="SocialFooterLinks" class="list-unstyled list-inline hidden-xs">
+              <li><a href="#/"><span class="fa fa-facebook"></span></a></li>
+              <li><a href="#/"><span class="fa fa-twitter"></span></a></li>
+              <li><a href="#/"><span class="fa fa-instagram"></span></a></li>
+              <li><a href="#/"><span class="fa fa-youtube"></span></a></li>    
+            </ul>
+        </div>
+      </div>
       <!-- <div id="YoutubeVideoEmbed">
         <div class="row text-center">
           <div class="col-xs-12">
