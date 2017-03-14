@@ -43,14 +43,17 @@ nav.navbar-default {
   margin-bottom: 0 !important;
   .navbar-header {
     .navbar-brand {
+      margin-top:40px;
       strong {
-        font-size:48px;
-        color:dodgerblue !important;
+        font-size:128px;
+        color:white !important;
+        text-shadow: 6px 6px 3px dodgerblue;
       }
       small {
-        margin-left: 10px;
-        font-size:25px;
-        color: crimson;
+        margin-left:25px;
+        font-size:64px;
+        color: white;
+        text-shadow: 6px 6px 3px #CF5300;
       }
     }
   }
@@ -69,7 +72,7 @@ nav.navbar-default {
     }
     &:hover {
       span {
-        color: crimson; 
+        color: #CF5300; 
       }
     }
   }
@@ -79,7 +82,7 @@ div[id$="ContentContainer"] {
   div[class$="-content-wrapper"] {
     div[id$="Jumbotron"] {
       position:fixed;
-      top:44%;
+      top:63%;
       bottom: 0;
       left: 0;
       right: 0;
@@ -90,12 +93,13 @@ div[id$="ContentContainer"] {
         background: url('/images/aboutBanner.jpeg');
         background-size: cover;
         background-repeat:no-repeat;
-        height:44%;
+        height:63%;
         overflow: hidden;
         position:fixed;
         top:0;left:0;right:0;
+        // border-bottom: 4px solid black;
         h1 {
-          color:crimson;
+          color:#CF5300;
           text-shadow: 2px 2px black;
           position:absolute;
           bottom:5px;
@@ -108,14 +112,16 @@ div[id$="ContentContainer"] {
 
     .container {
       position: absolute;
-      background: rgba(crimson,0.3);
-      bottom:0; 
-      left:0; 
-      top:44%;
+      background: rgba(dodgerblue,0.6);
+      // border-right: 5px solid black;
+      bottom:15px; 
+      left:15px; 
+      top:20%;
       padding:5px;
+      border-radius:4px;
       overflow-y: scroll;
       overflow-x: hidden;
-      width:64%;
+      width:36%;
       z-index: 500;
     }
 
@@ -123,6 +129,7 @@ div[id$="ContentContainer"] {
       background: none !important;
       border: none;
       img {
+        // border: 2px solid black;
         margin: 0 auto !important;
         &:hover {
           cursor:pointer;
@@ -157,14 +164,13 @@ footer {
   z-index:100;
   #SkylineBanner {
     position:fixed;
-    left:-15px;
-    bottom:-10px;
+    left:-100px;
+    bottom:-45px;
     padding: 5px;
-    margin-top: 300px;
     overflow: hidden;
-    opacity: 0.2;
+    opacity: 0.45;
     z-index: 200;
-    right:10px;
+    width:99%;
   }
   #SocialFooterLinks {
     position:relative;
@@ -173,7 +179,7 @@ footer {
       color: dodgerblue;      
       &:hover {
         pointer:cursor;
-        color:crimson !important; 
+        color:#CF5300 !important; 
       }
     }
     z-index:300;
