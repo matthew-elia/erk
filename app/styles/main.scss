@@ -36,6 +36,7 @@ hr {
 nav.navbar-default {
   position:fixed;
   left:0;right:0;
+  top:0;
   z-index: 3;
   background: transparent !important;
   border: none;
@@ -187,18 +188,34 @@ footer {
     background: white;
     z-index: 6;
     transform: translateY(0%);
-    #SplashScreenLogo {
-      margin-top:40px;
-      strong {
-        font-size:128px;
-        color:white !important;
-        text-shadow: 6px 6px 3px dodgerblue;
+    #CreditsContentWrapper{
+      height: 100%;
+      overflow-y: hidden;
+      #TickerTape{
+        display: flex;
+        position: relative;
+        li {
+          padding:0;
+          img{
+            height: 420px;
+            width: auto;
+          }
+        }
       }
-      small {
-        margin-left:25px;
-        font-size:64px;
-        color: white;
-        text-shadow: 6px 6px 3px #CF5300;
+      #ScrollbarStyleMaster::-webkit-scrollbar-track
+      {
+        box-shadow: inset 0 12px 12px 12px rgba(seagreen,1);
+        -webkit-box-shadow: inset 0 0 8px rgba(yellow,0.9);
+        background-color: hotpink;
+      }
+      #ScrollbarStyleMaster::-webkit-scrollbar
+      {
+        height: 10px;
+        width: 50px;
+      }
+      #ScrollbarStyleMaster::-webkit-scrollbar-thumb
+      {
+        background-color: #CF5300;
       }
     }
 }
@@ -220,7 +237,7 @@ footer {
     bottom: 0;
     background: white;
     z-index: 4;
-    transform: translateY(200%);  
+    transform: translateY(200%);
 }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {}

@@ -9,9 +9,9 @@
  */
 angular.module('erkApp')
   .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
+    setInterval(function(){
+    	$('#TickerTape').animate({left:'-='+$('#TickerTape > li > img').width()+''}, 1000);
+    },4000);
+
   });
