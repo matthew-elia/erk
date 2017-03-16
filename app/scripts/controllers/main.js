@@ -8,10 +8,6 @@
  * Controller of the erkApp
  */
 angular.module('erkApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($animate) {
+	setInterval(function(){ $('#TickerTape').animate({left: "-=4px"}) }, 160);
   });

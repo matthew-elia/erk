@@ -16,6 +16,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
     position: absolute;
     height:100%;width:100%;
     padding:0;margin:0;
+    overflow-y: hidden;
   }
   a {
     color: dodgerblue;
@@ -29,6 +30,8 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
     width: 70%;
   }
 
+
+
 // primary navbar header
 nav.navbar-default {
   position: fixed;
@@ -39,85 +42,81 @@ nav.navbar-default {
   border-radius:0;
   margin-bottom: 0 !important;
   .navbar-header {
-    .navbar-brand {
-      margin-top:40px;
-      strong {
-        font-size:128px;
-        color:white !important;
-        text-shadow: 6px 6px 3px dodgerblue;
-      }
-      small {
-        margin-left:25px;
-        font-size:64px;
-        color: white;
-        text-shadow: 6px 6px 3px #CF5300;
-      }
+    color: black;
+    width: 100%;
+    #WorkingTitle {
+      font-size: 96px;
+      text-shadow: 2px 2px 2px rgba(233,11,111,0.5);
     }
-  }
-  .navbar-collapse {
-    background: transparent !important;
-    border-bottom: none;
-    .social-links{padding:5px 10px;display:inline;}
-  }
+    #PenName {
+      font-size:48px;
+      text-shadow: 2px 2px 2px rgba(233,11,111,0.5);
+      margin-left:150px;
+    }
+    .navbar-collapse {
+      background: transparent !important;
+      border-bottom: none;
+      .social-links{padding:5px 10px;display:inline;}
+    }
 
-  .social-links, 
-  .page-links {
-    font-size: 36px;
-    text-decoration: none;
-    span {
-      color: dodgerblue;      
-    }
-    &:hover {
+    .social-links, 
+    .page-links {
+      font-size: 36px;
+      text-decoration: none;
       span {
-        color: #CF5300; 
+        color: dodgerblue;      
+      }
+      &:hover {
+        span {
+          color: #CF5300; 
+        }
       }
     }
   }
 }
 
+  footer {
+    position:absolute;
+    bottom:-15;
+    left:0;right:0;  
+    height:85px;
+    z-index:100;
+    #TickerTape {
+      position: relative;
+    }
+
+}
 
 
 #RootContentWrapper {
 
-  div[id$="ContentContainer"] {
+  div[id$="ContentContainer"] { 
     div[class$="-content-wrapper"] {
-      .container {
-        // position: relative;
-        background: rgba(#CF5300, 0.5);
+      #SkylineBanner {
+        position: inherit;
+        opacity: 0.51;
         bottom: 0;
-        left: 0;
-        right: 50%;
+        right: 0;
         top: 0;
-        width: 3000px;
-        padding: 5px;
-        border-radius: 4px;
+        left: 0;
+        padding: 12px 8px;
         overflow-y: hidden !important;
         overflow-x: scroll !important;
-        z-index: 500;
-        }
+        z-index: 1;
+        background: powderblue;
+      }
       div[id$="Jumbotron"] {
         position:fixed;
-        top:63%;
+        background: url(/images/nuclearFlowers.png);
+        opacity: 0.467;
+        top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         color: black;
-        .jumbotron {
-          height:63%;
-          overflow: hidden;
-          position:fixed;
-          top:0;left:0;right:0;
-          h1 {
-            color:#CF5300;
-            text-shadow: 2px 2px black;
-            position:absolute;
-            bottom:5px;
-            right:15px;
-            font-size:8em;
-            border-bottom: 10px solid dodgerblue;
-          }
-        }
+        background-attachment:fixed;
       }
+    }
 
 
       #style-9::-webkit-scrollbar-track
@@ -143,53 +142,11 @@ nav.navbar-default {
           &:hover {
             cursor:pointer;
             opacity: 0.8;
-            // border-bottom:2px solid dodgerblue;
           }
         }
       }
     }
   }
 
-}
-
-footer {
-    position:fixed;
-    bottom:-15px;
-    left:0;
-    right:0;
-    z-index:100;
-    .row {
-      position:absolute;left:0;bottom:0;right:0;
-      overflow-x:scroll;overflow-y: hidden;
-    }
-    #CreditsContentWrapper{
-      overflow-y: hidden;
-      #TickerTape{
-        display: flex;
-        li {
-          padding:0;
-          img{
-            height: 100%;
-            width: auto;
-          }
-        }
-      }
-      #ScrollbarStyleMaster::-webkit-scrollbar-track
-      {
-        box-shadow: inset 0 12px 12px 12px rgba(seagreen,1);
-        -webkit-box-shadow: inset 0 0 8px rgba(yellow,0.9);
-        background-color: hotpink;
-      }
-      #ScrollbarStyleMaster::-webkit-scrollbar
-      {
-        height: 10px;
-        width: 50px;
-      }
-      #ScrollbarStyleMaster::-webkit-scrollbar-thumb
-      {
-        background-color: #CF5300;
-      }
-    }
-  }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {}
