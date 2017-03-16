@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Sounds by EV</title>
+    <title>Sound by EV</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -15,62 +15,66 @@
     <!-- endbuild -->
   </head>
   <body ng-app="erkApp">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <!-- <div class="row"> -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavCollapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
-            </button>
-            <a class="navbar-brand" href='/'>
-              <strong><b>SOUND</b></strong>
-              <br>&nbsp;&nbsp;&nbsp;
-              <small class="text-muted" style=""> by ERIC VARGAS</small>
-            </a>
-          </div>
-          <div class="collapse navbar-collapse" id="NavCollapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="page-links"><a href="/#!/"><span>WORK</span></a></li>
-              <li class="page-links"><a href="/#!/blog"><span>BLOG</span></a></li>
-              <li class="page-links"><a href="/#!/about"><span>ABOUT</span></a></li>
-              <div class="visible-xs text-center">
-                <hr>
-                <li class="social-links"><a href="#/"><span class="fa fa-facebook"></span></a></li>
-                <li class="social-links"><a href="#/"><span class="fa fa-twitter"></span></a></li>
-                <li class="social-links"><a href="#/"><span class="fa fa-instagram"></span></a></li>
-                <li class="social-links"><a href="#/"><span class="fa fa-youtube"></span></a></li>    
-              </div>
-            </ul>
-          </div>
-      </div>
-    </nav>
 
-    <div id="RootContentWrapper">
+    <div id="TopParallax">    
+      <span class="text-center" style="position:absolute;left:0;right:0;bottom:20px;">
+        <h1>SCROLL</h1>
+        <i class="fa fa-chevron-down fa-5x"></i>
+      </span>
+    </div>
+
+    </div>
+    <div id="MiddleParallax">
+     <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- <div class="row"> -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href='/'>
+                <strong><b>SOUND</b></strong>
+                <br>&nbsp;&nbsp;&nbsp;
+                <small class="text-muted" style=""> by ERIC VARGAS</small>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="NavCollapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="page-links"><a href="/#!/"><span>WORK</span></a></li>
+                <li class="page-links"><a href="/#!/blog"><span>BLOG</span></a></li>
+                <li class="page-links"><a href="/#!/about"><span>ABOUT</span></a></li>
+                <div class="visible-xs text-center">
+                  <hr>
+                  <li class="social-links"><a href="#/"><span class="fa fa-facebook"></span></a></li>
+                  <li class="social-links"><a href="#/"><span class="fa fa-twitter"></span></a></li>
+                  <li class="social-links"><a href="#/"><span class="fa fa-instagram"></span></a></li>
+                  <li class="social-links"><a href="#/"><span class="fa fa-youtube"></span></a></li>    
+                </div>
+              </ul>
+            </div>
+        </div>
+      </nav>
       <div ng-view=""></div>
     </div>
 
-    <footer> 
-      <div class="container-fluid">
-        <img id="SkylineBanner" src="images/skyline.png" class="img-responsive" />
-        <div class="pull-right">
-          <ul id="SocialFooterLinks" class="list-unstyled list-inline hidden-xs">
-              <li><a href="#/"><span class="fa fa-facebook"></span></a></li>
-              <li><a href="#/"><span class="fa fa-twitter"></span></a></li>
-              <li><a href="#/"><span class="fa fa-instagram"></span></a></li>
-              <li><a href="#/"><span class="fa fa-youtube"></span></a></li>    
-            </ul>
+    <div id="BottomParallax">
+      <footer> 
+        <div class="container-fluid">
+          <img id="SkylineBanner" src="images/skyline.png" class="img-responsive" />
+          <div class="pull-right">
+            <ul id="SocialFooterLinks" class="list-unstyled list-inline hidden-xs">
+                <li><a href="#/"><span class="fa fa-facebook"></span></a></li>
+                <li><a href="#/"><span class="fa fa-twitter"></span></a></li>
+                <li><a href="#/"><span class="fa fa-instagram"></span></a></li>
+                <li><a href="#/"><span class="fa fa-youtube"></span></a></li>    
+              </ul>
+          </div>
         </div>
-      </div>
-      <!-- <div id="YoutubeVideoEmbed">
-        <div class="row text-center">
-          <div class="col-xs-12">
-            <iframe height="240px" width="320px" src="https://youtube.com/embed/YQHneGxuZrs"></iframe>
-          </div>  
-        </div>
-      </div> -->
-    </footer>
+      </footer>
+    </div>
+    
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

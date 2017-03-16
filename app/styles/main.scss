@@ -34,9 +34,9 @@ hr {
 }
 
 nav.navbar-default {
-  position: fixed;
+  position:fixed;
   left:0;right:0;
-  z-index: 1000;
+  z-index: 3;
   background: transparent !important;
   border: none;
   border-radius:0;
@@ -79,41 +79,32 @@ nav.navbar-default {
 }
 
 div[id$="ContentContainer"] {
+  background: url('/images/aboutBanner.jpeg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  height:100%;
+  overflow: hidden;
+  position:fixed;
+  top:0;left:0;right:0;
   div[class$="-content-wrapper"] {
     div[id$="Jumbotron"] {
-      position:fixed;
-      top:63%;
-      bottom: 0;
-      left: 0;
-      right: 0;
       color: black;
       overflow-x: hidden !important;
       overflow-y: scroll !important;
-      .jumbotron {
-        background: url('/images/aboutBanner.jpeg');
-        background-size: cover;
-        background-repeat:no-repeat;
-        height:63%;
-        overflow: hidden;
-        position:fixed;
-        top:0;left:0;right:0;
-        // border-bottom: 4px solid black;
-        h1 {
-          color:#CF5300;
-          text-shadow: 2px 2px black;
-          position:absolute;
-          bottom:5px;
-          right:15px;
-          font-size:8em;
-          border-bottom: 10px solid dodgerblue;
-        }
+      h1 {
+        color:#CF5300;
+        text-shadow: 2px 2px black;
+        position:absolute;
+        bottom:5px;
+        right:15px;
+        font-size:8em;
+        border-bottom: 10px solid dodgerblue;
       }
     }
 
     .container {
       position: absolute;
       background: rgba(dodgerblue,0.6);
-      // border-right: 5px solid black;
       bottom:15px; 
       left:15px; 
       top:20%;
@@ -184,9 +175,52 @@ footer {
     }
     z-index:300;
   }
-  // #YoutubeVideoEmbed {}
 } 
 
 
+#TopParallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    z-index: 6;
+    transform: translateY(0%);
+    #SplashScreenLogo {
+      margin-top:40px;
+      strong {
+        font-size:128px;
+        color:white !important;
+        text-shadow: 6px 6px 3px dodgerblue;
+      }
+      small {
+        margin-left:25px;
+        font-size:64px;
+        color: white;
+        text-shadow: 6px 6px 3px #CF5300;
+      }
+    }
+}
+
+#MiddleParallax {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 4;
+}
+
+#BottomParallax {
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    z-index: 4;
+    transform: translateY(200%);  
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {}
