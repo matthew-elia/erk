@@ -48,12 +48,18 @@ nav.navbar-default {
         font-size:128px;
         color:white !important;
         text-shadow: 6px 6px 3px dodgerblue;
+        @media screen and (max-width: 768px) {
+          font-size: 96px;
+        }
       }
       small {
         margin-left:25px;
         font-size:64px;
         color: white;
         text-shadow: 6px 6px 3px #CF5300;
+        @media screen and (max-width: 768px) {
+          font-size: 42px;
+        }
       }
     }
   }
@@ -123,6 +129,13 @@ div[id$="ContentContainer"] {
       overflow-x: hidden;
       width:36%;
       z-index: 500;
+      @media screen and (max-width: 768px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 600px) {
+        width: 94%;
+      }
+
     }
 
     .thumbnail {
